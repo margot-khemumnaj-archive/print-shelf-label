@@ -5,7 +5,7 @@ public PrintResult PrintShelfLabels(PrintInfo pi, List<ShelfLabelItemAndPrice> l
     mostRecentResult.Filename = ""; // No file
     try
     {
-        Prce = new BarcodeCE("LICENSE-REDACTED"); // Original contained proprietary license identifier
+        Prce = new BarcodeCE("LICENSE-REDACTED"); // ARCHIVER NOTE: Original contained proprietary license identifier
 
         double labelWidth = 2.875;
         double labelHeight = 1.0;
