@@ -186,14 +186,14 @@ public PrintResult PrintShelfLabels(PrintInfo pi, List<ShelfLabelItemAndPrice> l
 
                 double word1word2word3word4_w = Prce.GetStringWidth(word1 + " " + word2 + " " + word3 + " " + word4);
                 double word1word2word3_w = Prce.GetStringWidth(word1 + " " + word2 + " " + word3);
-                double word2word3word4_w = Prce.GetStringWidth(word2 + " " + word3 + " " + word4);
+                double word2word3word4_w = Prce.GetStringWidth(word1 + " " + word2 + " " + word3);
                 double word1word2_w = Prce.GetStringWidth(word1 + " " + word2);
                 double word2word3_w = Prce.GetStringWidth(word2 + " " + word3);
                 double word3word4_w = Prce.GetStringWidth(word3 + " " + word4);
 
                 string word1word2word3word4 = word1 + " " + word2 + " " + word3 + " " + word4;
                 string word1word2word3 = word1 + " " + word2 + " " + word3;
-                string word2word3word4 = word2 + " " + word3 + " " + word4;
+                string word2word3word4 = word1 + " " + word2 + " " + word3;
                 string word1word2 = word1 + " " + word2;
                 string word2word3 = word2 + " " + word3;
                 string word3word4 = word3 + " " + word4;
@@ -331,7 +331,7 @@ public PrintResult PrintShelfLabels(PrintInfo pi, List<ShelfLabelItemAndPrice> l
             double fullDescriptionWidth = Prce.GetStringWidth(fullDescriptionString);
             double fullDescriptionHeight = Prce.GetStringHeight;
 
-            // KJQ 1/13/10 I just fit it across the bottom of the label (right justified) ...
+            // [INITIALS] 1/13/10 I just fit it across the bottom of the label (right justified) ...
             // and always in the same font, hence replaced commented out code with the 3 lines below
 
             double fullDescriptionX = (labelWidth - 0.1) - Prce.GetStringWidth(fullDescriptionString);
